@@ -42,9 +42,15 @@ public class RestaurantService {
         }
         return obj;
     }
-    public RestaurantModel remove(RestaurantModel name){
-        if(restaurant.contains(name))
-            restaurant.remove(name);
-        return name;
+    public String remove(String  name){
+     for(RestaurantModel res:restaurant){
+         if(res.getRestaurantName().equals(name)){
+             restaurant.remove(res);
+             return "deleted Restaurant";
+         }
+
+     }
+    return "";
+
     }
 }

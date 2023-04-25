@@ -29,7 +29,7 @@ public class RestaurantController {
         return restaurantService.update(restaurant);
     }
     @DeleteMapping("/removeByName/{name}")
-    public RestaurantModel remove(@PathVariable RestaurantModel name){
+    public String remove(@PathVariable String name){
         return   restaurantService.remove(name);
     }
 }
