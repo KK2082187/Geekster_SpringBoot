@@ -9,7 +9,7 @@ public class MailAuthenticator extends Authenticator {
     protected PasswordAuthentication getPasswordAuthentication()
     {
 
-        return new PasswordAuthentication(MailConstants.SENDER, "***********");
+        return new PasswordAuthentication(MailConstants.SENDER, "**********");
     }
 
 
