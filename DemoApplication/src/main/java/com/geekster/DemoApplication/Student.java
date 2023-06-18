@@ -1,5 +1,5 @@
 package com.geekster.DemoApplication;
-
+ 
 public class Student {
     private String name;
     public String getName(){
