@@ -12,6 +12,6 @@ public class TeacherController {
     Teacher t1;
     @RequestMapping(value="/teach",method= RequestMethod.GET)
     public String teach(){
-       return t1.teach();
+       return t1.teach(); 
     }
 }
