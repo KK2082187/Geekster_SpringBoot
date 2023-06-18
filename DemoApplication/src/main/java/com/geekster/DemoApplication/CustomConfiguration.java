@@ -2,7 +2,7 @@ package com.geekster.DemoApplication;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-//Configuration to handel beans
+//Configuration to handel beans 
 @Configuration
 public class CustomConfiguration {
     @Bean
