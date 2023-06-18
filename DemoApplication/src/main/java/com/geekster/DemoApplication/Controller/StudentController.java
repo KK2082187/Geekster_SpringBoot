@@ -12,6 +12,6 @@ public class StudentController {
     Student s1;
     @GetMapping("/student")
     public Student getStudent(){
-        return s1;
+        return s1; 
     }
 }
