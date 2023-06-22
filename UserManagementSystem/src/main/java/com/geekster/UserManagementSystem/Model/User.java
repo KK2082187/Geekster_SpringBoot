@@ -9,41 +9,52 @@ public class User {
     private String userName;
     private String address;
     private String phoneNo;
-    public User(Integer userId,String name,String userName,String address,String phoneNo){
-        this.userId = userId;
-        this.name = name;
-        this.userName = userName;
-        this.address = address;
-        this.phoneNo = phoneNo;
-    }
-    public Integer getUserId(){
+
+    public Integer getUserId() {
         return userId;
     }
-    public void setUserId(Integer userId){
+
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    public String getUserName(){
+
+    public String getUserName() {
         return userName;
     }
-    public void setUserName(String userName){
+
+    public void setUserName(String userName) {
         this.userName = userName;
     }
-    public String getAddress(){
+
+    public String getAddress() {
         return address;
     }
-    public void setAddress(String address){
+
+    public void setAddress(String address) {
         this.address = address;
     }
-    public String getPhoneNo(){
+
+    public String getPhoneNo() {
         return phoneNo;
     }
-    public void setPhoneNo(String phoneNo){
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public User(Integer userId, String name, String userName, String address, String phoneNo) {
+        this.userId = userId;
+        this.name = name;
+        this.userName = userName;
+        this.address = address;
         this.phoneNo = phoneNo;
     }
 }
