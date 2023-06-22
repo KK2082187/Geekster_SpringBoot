@@ -18,7 +18,7 @@ public class UserController {
     }
     @GetMapping("/getUser/{userId}")
     public  String getUser(@PathVariable String userId){
-        return userService.getUser(Integer.valueOf(userId)).toString();
+        return userService.getUser(Integer.valueOf(userId)).toString(); 
     }
     @GetMapping("/getAllUser")
     public Map<Integer,User> getAllUser(){
