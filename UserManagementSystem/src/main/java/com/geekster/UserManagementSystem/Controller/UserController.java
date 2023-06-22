@@ -5,31 +5,36 @@ import com.geekster.UserManagementSystem.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 public class UserController {
-    @Autowired
-    UserService userService;
-    @PostMapping("/addUser")
-    public String addUser(@RequestBody User user){
-        String userAdded = userService.addUser(user);
-        return userAdded;
+     @Autowired
+     UserService userService;
+
+    @PostMapping(value="/addUser")
+    public String addedUser(@RequestBody User user){
+        return userService.addUser(user);
     }
-    @GetMapping("/getUser/{userId}")
-    public  String getUser(@PathVariable String userId){
-        return userService.getUser(Integer.valueOf(userId)).toString();
-    }
-    @GetMapping("/getAllUser")
-    public Map<Integer,User> getAllUser(){
+
+
+    @GetMapping("getUser/{userId}")
+     public User getUser(@PathVariable Integer userId){
+        return userService.getUser(userId);
+     }
+
+    @GetMapping("getAllUser")
+    public List<User> allUser(){
         return userService.getAllUser();
     }
-    @PutMapping("/updateUserInfo/{userId}")
-    public String updateUserInfo(@RequestBody User user,@PathVariable String userId){
-        return userService.updateUser(user,Integer.valueOf(userId));
+
+    @PutMapping("updateUserInfo/{userId}/{name}")
+    public String updateUserInfo(@PathVariable Integer userId,@PathVariable String name){
+        return userService.updateUserInfo(userId,name);
     }
-    @DeleteMapping("/deleteUser/{userId}")
-    public String deleteUser(@PathVariable String userId){
-        return userService.deleteUser(Integer.parseInt(userId));
+    @DeleteMapping("deleteUser/{userId}")
+    public String deleteUser(@PathVariable Integer userId){
+        return userService.deleteUser(userId);
     }
+
 }
