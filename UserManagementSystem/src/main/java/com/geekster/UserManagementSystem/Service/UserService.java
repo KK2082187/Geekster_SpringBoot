@@ -24,7 +24,7 @@ public List<User> getUser(Integer userId){
         }
     }
     return userList;
-}
+} 
 public String updateUser(User newUser,Integer userId){
     if(userData.containsKey(userId)){
         userData.put(userId,newUser);
