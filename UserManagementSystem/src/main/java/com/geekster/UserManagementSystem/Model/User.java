@@ -7,7 +7,7 @@ public class User {
     private Integer userId;
     private String name;
     private String userName;
-    private String address;
+    private String address; 
     private String phoneNo;
     public User(Integer userId,String name,String userName,String address,String phoneNo){
         this.userId = userId;
