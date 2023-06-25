@@ -1,5 +1,5 @@
 package com.geekster.Restaurant.Model;
-
+ 
 public class RestaurantModel {
     private String restaurantName;
     private String restaurantAddress;
