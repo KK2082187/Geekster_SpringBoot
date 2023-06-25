@@ -22,7 +22,7 @@ public class RestaurantService {
         List<RestaurantModel>list = new ArrayList<>();
         for(RestaurantModel res:restaurant){
             if(res.getRestaurantName().equals(name)){
-                list.add(res);
+                list.add(res); 
             }
         }
         for(RestaurantModel res:list){
