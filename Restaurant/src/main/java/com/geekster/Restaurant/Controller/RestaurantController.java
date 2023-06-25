@@ -3,7 +3,7 @@ package com.geekster.Restaurant.Controller;
 import com.geekster.Restaurant.Model.RestaurantModel;
 import com.geekster.Restaurant.Service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.*; 
 
 import java.util.List;
 
