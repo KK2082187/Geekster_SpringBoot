@@ -11,8 +11,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 public class Event {
+
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer eventId ;
     private String eventName;
     private String locationOfEvent;

@@ -1,5 +1,6 @@
 package com.geekster.University.Event.Management.Controller;
 
+import com.geekster.University.Event.Management.Model.Department;
 import com.geekster.University.Event.Management.Model.Student;
 import com.geekster.University.Event.Management.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class StudentController {
         return "Student add Successfully Student id: "+student.getStudentId()+" "+student.getFirstName();
     }
 
-    @GetMapping(value = "/find-student/studentId/{studentId}")
+    @GetMapping(value = "/find-student/{studentId}")
     public Student findById(@PathVariable int studentId){
         Student student=studentService.findById(studentId);
         return student;
@@ -28,12 +29,12 @@ public class StudentController {
         return studentService.findAll();
     }
 
-    @PutMapping(value = "/update-student/studentId/{studentId}/department/{department}")
-    public String updateById(@PathVariable int studentId,@PathVariable String department){
+    @PutMapping(value = "/update-student-department/{studentId}/{department}")
+    public String updateById(@PathVariable int studentId,@PathVariable Department department){
         studentService.updateStudent(studentId,department);
         return "Update Student successfully ";
     }
-    @DeleteMapping(value="/delete-student/studentId/{studentId}")
+    @DeleteMapping(value="/delete-student/{studentId}")
     public String deleteById(@PathVariable int studentId){
         studentService.deleteStudent(studentId);
         return "Student Deleted Successfully";

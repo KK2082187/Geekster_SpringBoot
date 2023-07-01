@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface IEventRepository extends CrudRepository<Event,Integer> {
     public List<Event> findAll();
+
     public Event findById(int eventId);
     public void addEvent(Event event);
     public void deleteEvent(int eventId) ;

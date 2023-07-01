@@ -11,11 +11,13 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 public class Student {
+
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer studentId;
     private String firstName;
     private String lastName;
     private Integer age;
-    private String department;
+    @Enumerated(EnumType.STRING)
+    private Department department;
 }

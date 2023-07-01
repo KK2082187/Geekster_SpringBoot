@@ -35,4 +35,8 @@ public class EventController {
         eventService.deleteEvent(eventId);
         return "Event Deleted Successfully";
     }
+    @GetMapping("all-event-date/date")
+    public List<Event>allEventByDate(@PathVariable String date){
+        return eventService.allEventByDate(date);
+    }
 }

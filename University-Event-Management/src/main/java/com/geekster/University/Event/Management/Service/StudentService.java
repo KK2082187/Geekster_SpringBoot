@@ -1,5 +1,6 @@
 package com.geekster.University.Event.Management.Service;
 
+import com.geekster.University.Event.Management.Model.Department;
 import com.geekster.University.Event.Management.Model.Student;
 import com.geekster.University.Event.Management.Repository.IStudentRepository;
 
@@ -26,7 +27,7 @@ public class StudentService {
     }
 
 
-    public void updateStudent(int studentId, String department) {
+    public void updateStudent(int studentId, Department department) {
         Student student=iStudentRepository.findById(studentId);
         student.setDepartment(department);
 

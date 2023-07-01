@@ -5,6 +5,7 @@ import com.geekster.University.Event.Management.Repository.IEventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -33,4 +34,15 @@ public class EventService {
        event.setEndTime(newEvent.getEndTime());
        iEventRepository.save(event);
    }
+
+    public List<Event> allEventByDate(String date) {
+        List<Event>eventList = iEventRepository.findAll();
+        List<Event>dateEvent=null;
+        for(Event event:eventList){
+            if(event.equals(date)){
+                dateEvent.add(event);
+            }
+        }
+        return dateEvent;
+    }
 }
