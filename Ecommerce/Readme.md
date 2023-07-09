@@ -35,12 +35,16 @@ Language : java
 
 ### Service ###
 -getOrderByOrderId( )
+-To get all the order by orderId.
 
 -getUserByUserId( ) 
+-To get all the user by userId.
 
 -getProducts( ) 
+-To get all the product list.
 
 -deleteProduct( )
+-To delete the product from the table.
 
 ### Repository ###
 SQL code is written in the repository layer.
