@@ -5,5 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IAuthenticationRepo extends JpaRepository<Authentication,Long> {
+public interface IAuthenticationRepo extends JpaRepository<Authentication,Long>
+{
+    Authentication findFirstByToken(String token);
+
 }

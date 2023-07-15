@@ -1,9 +1,7 @@
 package com.geekster.Restaurant.Management.Service.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,9 +12,13 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long adminId;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private String adminName;
+    @Pattern(regexp = "^.+@restaurantAdmin\\.com$")
+    private String adminEmail;
+    private String adminPassword;
+    @OneToMany
+    @JoinColumn(name="fk_food_item")
+    private FoodItem foodItem;
 }

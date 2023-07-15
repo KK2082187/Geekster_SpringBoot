@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("admin")
 public class AdminController {
-    @Autowired
+ @Autowired
     AdminService adminService;
-    @PostMapping(value = "foodItem")
-    public String addAdmin(@RequestBody Admin admin){
-        return adminService.add(admin);
-    }
-
+  @PostMapping("addItem")
+    public String addFood(@RequestBody FoodItem foodItem){
+      return addFood(foodItem);
+  }
 
 }

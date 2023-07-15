@@ -14,8 +14,8 @@ public class FoodItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long foodId;
-    @Column(name="food_name")
-    private String foodName;
+    @Column(name="food_title")
+    private String foodTitle;
     @Column(name="food_price")
     private Double foodPrice;
 

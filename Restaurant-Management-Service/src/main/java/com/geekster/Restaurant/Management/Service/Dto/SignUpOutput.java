@@ -5,9 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class SignUpOutput {
-    String status;
-    String message;
+    private  boolean  signUpStatus;
+    private String signUpStatusMessage;
 }

@@ -15,14 +15,14 @@ public class Authentication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tokenId;
-    private String token;
+    private String tokenValue;
     private LocalDate tokenCreationDate;
     @OneToOne
-    @JoinColumn(nullable = false,name="fk_user_ID")
+    @JoinColumn(name="fk_user_ID")
     private User user;
     public Authentication(User user){
         this.user = user;
+        this.tokenValue = UUID.randomUUID().toString();
         this.tokenCreationDate = LocalDate.now();
-        this.token = UUID.randomUUID().toString();
     }
 }
