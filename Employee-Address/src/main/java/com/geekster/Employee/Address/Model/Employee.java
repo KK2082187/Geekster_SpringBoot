@@ -20,6 +20,6 @@ public class Employee {
     @Column(name = "last_Name")
     private String lastName;
     @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="address")
+    @JoinColumn(name="emp_id")
     private Address address;
 }

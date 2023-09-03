@@ -18,17 +18,17 @@ public class JobController {
         return jobService.getJobByType(jobType);
     }
     @GetMapping(value="/employ/{salary}")
-    public List<JobModel>getAllCompanyName(@PathVariable Double salary){
-        return jobService.getAllCompanyName(salary);
+    public List<JobModel>getAllEmployeeSalary(@PathVariable Double salary){
+        return jobService.getAllEmployeeSalary(salary);
     }
     @PostMapping(value="/added")
     public String addedJob(@RequestBody List<JobModel>jobModelList){
         return jobService.addAll(jobModelList);
     }
     @PutMapping(value = "/employeeName/{employeeName}/ID/{id}")
-    public void insertJob(@PathVariable String companyName, @PathVariable Long id)
+    public void insertJob(@PathVariable String employeeName, @PathVariable Long id)
     {
-        jobService.updateEmployeeById(companyName,id);
+        jobService.updateEmployeeById(employeeName,id);
     }
     @DeleteMapping(value = "/companyName/{companyName}")
     public void deleteCompanyName(@PathVariable  String companyName)

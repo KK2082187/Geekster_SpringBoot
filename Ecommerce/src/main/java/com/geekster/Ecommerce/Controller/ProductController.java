@@ -6,25 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class ProductController {
+
     @Autowired
     ProductService productService;
-    @PostMapping(value = "/product")
-    public String saveProduct(@RequestBody Product product){
-        return productService.saveProduct(product);
+
+    @PostMapping("addProduct")
+    public String addProduct(@RequestBody List<Product>products){
+        return productService.addProduct(products);
     }
-    @GetMapping(value="/product/category")
-    public List<Product>getProduct(@RequestParam String category){
-        return productService.getProduct(category);
+    @GetMapping("product")
+    public Map<Integer, Product> getAllProduct(){
+        return productService.getAllProduct();
     }
-    @GetMapping(value="/product")
-    public List<Product>getAllProduct(){
-        return productService.getAllproduct();
+    @DeleteMapping("deleteProduct/{productId}")
+    public String deleteProduct(@PathVariable Integer productId){
+        return productService.deleteProduct(productId);
     }
-    @DeleteMapping(value = "delete-by-id")
-    public String deleteById(@RequestParam Integer productId){
-        return productService.deleteById(productId);
-    }
+
 }

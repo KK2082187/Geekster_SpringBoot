@@ -25,8 +25,8 @@ public class JobService {
             return "Failed !!!";
         }
     }
-    public List<JobModel>getAllCompanyName(Double salary){
-        return iJobRepository.getAllCompanyName(salary);
+    public List<JobModel>getAllEmployeeSalary(Double salary){
+        return iJobRepository.getAllEmployeeSalary(salary);
     }
     @Transactional
     public void updateEmployeeById(String employeeName,Long id){

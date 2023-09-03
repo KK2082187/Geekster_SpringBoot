@@ -10,26 +10,11 @@ import java.util.List;
 
 @Service
 public class AddressService {
-    @Autowired
-    IAddressRepo addressRepo;
-    public Address save(Address address) {
-        return addressRepo.save(address);
-    }
+//@Autowired
+//    IAddressRepo addressRepo;
+//    public String create(Address add){
+//        addressRepo.save(add);
+//        return "Saved";
+//    }
 
-    public List<Address> getAll() {
-        return addressRepo.findAll();
-    }
-
-    public List<Address> getId(Long id) {
-        return addressRepo.findAllById();
-    }
-
-    public void update(Long id){
-        Address event = addressRepo.findById(id);
-
-        addressRepo.save(event);
-    }
-    public void delete(Long id){
-        addressRepo.delete(id);
-    }
 }

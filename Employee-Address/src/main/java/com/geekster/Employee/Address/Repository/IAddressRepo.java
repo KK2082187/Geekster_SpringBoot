@@ -7,10 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IAddressRepo extends JpaRepository<Address,Integer> {
-    Address findById(Long id);
+public interface IAddressRepo extends JpaRepository<Address,Long> {
 
-    List<Address> findAllById();
-
-    void delete(Long id);
 }

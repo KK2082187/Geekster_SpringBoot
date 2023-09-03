@@ -46,6 +46,6 @@ public class UserService {
                 return "Deleted";
             }
         }
-        return "Already deleted";
+        return "Already deleted data";
     }
 }

@@ -7,10 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IEmployeeRepo extends JpaRepository<Employee,Integer> {
-    void delete(Long id);
+public interface IEmployeeRepo extends JpaRepository<Employee,Long> {
 
-    Employee findById(Long id);
-
-    List<Employee> findAllById();
 }

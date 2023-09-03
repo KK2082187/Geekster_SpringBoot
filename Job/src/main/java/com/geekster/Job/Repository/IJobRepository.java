@@ -10,14 +10,14 @@ import java.util.List;
 public interface IJobRepository extends CrudRepository<JobModel,Integer> {
 
     List<JobModel> findBy();
-    @Query(value="select*from JOB_MODEL where EMPLOYEE_NAME > :salary",nativeQuery=true)
-    public List<JobModel>getAllCompanyName(Double salary);
+    @Query(value="select*from JOB_MODEL where salary > :20000",nativeQuery=true)
+    public List<JobModel>getAllEmployeeSalary(Double salary);
 
     @Modifying
     @Query(value = "update JOB_MODEL set EMPLOYEE_NAME = :salary where ID = :id" , nativeQuery = true)
     public void updateEmployeeById(String employeeName, Long id);
 
     @Modifying
-    @Query(value = "Delete from JOB_MODEL where COMPANY_NAME <= :salary" , nativeQuery = true)
+    @Query(value = "Delete from JOB_MODEL where EMPLOYEE_NAME <= :salary" , nativeQuery = true)
     public void deleteCompanyName(String  companyName);
 }

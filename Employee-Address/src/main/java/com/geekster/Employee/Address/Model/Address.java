@@ -22,4 +22,6 @@ public class Address {
     private String state;
     @Column(name = "zipcode")
     private String zipcode;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Employee employee;
 }

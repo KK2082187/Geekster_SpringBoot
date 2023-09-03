@@ -3,20 +3,25 @@ package com.geekster.urlhitcounter.Model;
 public class UrlHitModel {
     private String userName;
     private int count;
-    public UrlHitModel(String userName,int count){
-        this.userName = userName;
-        this.count = count;
-    }
-    public String getUserName(){
+
+    public String getUserName() {
         return userName;
     }
-    public void setUserName(String userName){
+
+    public void setUserName(String userName) {
         this.userName = userName;
     }
-    public int getCount(){
+
+    public int getCount() {
         return count;
     }
-    public void setCount(int count){
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public UrlHitModel(String userName, int count) {
+        this.userName = userName;
         this.count = count;
     }
 }
