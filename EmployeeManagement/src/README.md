@@ -73,7 +73,7 @@ Zipcode (String)
 
 4. The method in service class builds logic and retrieves or modifies data from the database, which is in turn given to controller class
 5. The controller method returns a response to the API.
-6. The API sends the response back to the user.
+
 
 ---
 
